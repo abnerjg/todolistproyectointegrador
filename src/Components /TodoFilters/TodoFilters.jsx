@@ -5,13 +5,13 @@ const TodoFilters = ({ total, activeFilter, showAllTodos, showActiveTodos, showC
         <FiltersContainer> 
         <ItemsLeft total={total} />
             <FilterButtonContainer>
-                <FilterButton action={() => showAllTodos()} active={activeFilter} filter='All' />
-                <FilterButton action={() => showActiveTodos()} active={activeFilter} filter='Active' />
-                <FilterButton action={() => showCompletedTodos()} active={activeFilter} filter='Completed' />
+                <FilterButton action={() => showAllTodos()} active={activeFilter} filter='Todos' />
+                <FilterButton action={() => showActiveTodos()} active={activeFilter} filter='Restantes' />
+                <FilterButton action={() => showCompletedTodos()} active={activeFilter} filter='Completados' />
             </FilterButtonContainer>
 
-            <button onClick={() => handleClearComplete()} className="text-gray-400 hover:text-white cursor-pointer transition-all duration-300 ease-in-out">
-                Clear Completed
+            <button onClick={() => handleClearComplete()} className="text-black hover:text-white cursor-pointer transition-all duration-300 ease-in-out">
+                Borrar por completo
             </button>
         </FiltersContainer>
     )

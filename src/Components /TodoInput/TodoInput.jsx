@@ -17,12 +17,12 @@ const TodoInput = ({ addTodo }) => {
                 <span className="border border-gray-500 border-solid p-3 rounded-full"></span>
             </div>
             <input
-                className="focus:shadow-lg font-Inter focus:shadow-blue-800 pl-12 w-full py-4 bg-gray-700 rounded-xl outline-none transition-all duration-300 ease-in-out"
+                className="focus:shadow-lg font-Inter focus:shadow-blue-800 pl-12 w-full py-4 bg-white rounded-xl outline-none transition-all duration-300 ease-in-out"
                 type="text"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 onKeyDown={(e) => handleAddTodo(e)}
-                placeholder="What's next..."
+                placeholder="Que haremos...?"
             />
         </div>
     )

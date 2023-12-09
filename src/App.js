@@ -9,22 +9,22 @@ function App() {
   const [todos, setTodos] = useState([
     {
       id: 1,
-      title: 'Watch the next Marvel Movie',
+      title: 'Crear un portafolios',
       completed: false,
     },
     {
       id: 2,
-      title: 'Record the next Video',
+      title: 'Aprender Angular',
       completed: false,
     },
     {
       id: 3,
-      title: 'Wash the dishes',
+      title: 'Practicar Reat',
       completed: false,
     },
     {
       id: 4,
-      title: 'Study 2 hours',
+      title: 'Crear nuevos proyectos',
       completed: false,
     }
   ])
@@ -96,7 +96,7 @@ function App() {
   },[activeFilter, todos]);
 
   return (
-    <div className='bg-gray-900 min-h-screen font-inter h-full text-gray-100 flex items-center justify-center py-20 px-5'>
+    <div className='bg-blue-600 min-h-screen font-inter h-full text-gray-100 flex items-center justify-center py-20 px-5'>
       <div className='container flex flex-col max-w-xl'>
         <Title />
         <TodoInput addTodo={addTodo} />
