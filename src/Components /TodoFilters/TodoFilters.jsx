@@ -1,14 +1,6 @@
-import { FilterButton, FilterButtonContainer, FiltersContainer, ItemsLeft } from "./TodoFilters.components";
+import { FilterButton, FilterButtonContainer, FiltersContainer, ItemsLeft } from "./Filter.components"
 
-const TodoFilters = ( {
-    total, 
-    activeFilter, 
-    showAllTodos, 
-    showActiveTodos, 
-    showCompletedTodos, 
-    handleClearComplete
-
-} ) => {
+const TodoFilters = ({ total, activeFilter, showAllTodos, showActiveTodos, showCompletedTodos, handleClearComplete }) => {
     return (
         <FiltersContainer>
             <ItemsLeft total={total} />
@@ -25,4 +17,4 @@ const TodoFilters = ( {
     )
 }
 
-export { TodoFilters };
+export { TodoFilters }

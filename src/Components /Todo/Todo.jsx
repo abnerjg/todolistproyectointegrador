@@ -31,4 +31,4 @@ const Todo = ({ todo, handleSetComplete, handleDelete }) => {
     );
 }
 
-export { Todo } 
+export { Todo }
