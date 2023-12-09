@@ -1,5 +1,6 @@
 import { Todo } from "../Todo"
-import { TodoFilters } from "./TodoFilters"
+import { TodoFilters } from "../TodoFilters/TodoFilters"
+
 
 const TodoList = ({
     todos,
@@ -16,13 +17,14 @@ const TodoList = ({
                 <Todo key={todo.id} todo={todo} handleSetComplete={handleSetComplete} handleDelete={handleDelete} />
             )
             )}
-            <TodoFilters
-                activeFilter={activeFilter}
-                total={todos.length}
-                showAllTodos={showAllTodos}
-                showActiveTodos={showActiveTodos}
-                showCompletedTodos={showCompletedTodos}
-                handleClearComplete={handleClearComplete} />
+            <TodoFilters 
+            activeFilter={activeFilter}
+            total={todos.length}
+            showAllTodos={showAllTodos}
+            showActiveTodos={showActiveTodos}
+            showCompletedTodos={showCompletedTodos}
+            handleClearComplete={handleClearComplete} 
+            />
         </div>
     )
 }
