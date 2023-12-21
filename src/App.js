@@ -19,7 +19,7 @@ function App() {
     },
     {
       id: 3,
-      title: 'Practicar Reat',
+      title: 'Practicar React',
       completed: false,
     },
     {
