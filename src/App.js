@@ -6,6 +6,30 @@ import { TodoList } from  "./Components /TodoList/TodoList"
 //import './App.css';
 
 function App() {
+  const [theme, setTheme] = useState(null);
+
+  useEffect(() => {
+    if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+      setTheme('dark');
+    }
+    else {
+      setTheme('light');
+    }
+  }, [])
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  const handleThemeSwitch = () => {
+    setTheme(theme === "dark" ? "light" : "dark" );
+  };
+    
+
   const [todos, setTodos] = useState([
     {
       id: 1,
@@ -109,10 +133,12 @@ function App() {
           handleSetComplete={handleSetComplete}
           handleDelete={handleDelete}
           handleClearComplete={handleClearComplete} />
+        <button className="bg-slate-500 px-4 py-2 rounded hover:bg-slate-300"
+        onClick={ handleThemeSwitch }
+        > Touch Me </button>
       </div>
-        
     </div>
-  );
+  )
 }
 
 export default App;
